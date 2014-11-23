@@ -1,21 +1,25 @@
+var myApp = angular.module("myApp", []);
 
-var myApp = angular.module("coolApp", []);
-
-coolApp.factory("Data", function(){
-	return {message:"I'm data from a service"}
+myApp.factory("Greeting", function(){
+	return {message:"I'm a test"}
 });
 
-function MainController($scope, Data){
-	$scope.data = Data
-	$scope.product = {
-		price: 1.5,
-		name: "Poland Spring Water Bottle"
-	};
-}
+myApp.controller('PetController', function($scope){
+	
 
-function SecondController($scope){
-	$scope.product = {
-		price: 5,
-		name: "chicken over rice"
-	};
-}
+	var pets = [
+		{type: "dog", price: 50},
+		{type: "cat", price: 65},
+		{type: "bird", price: 35},
+		{type: "octopus", price: 85}
+	];
+	$scope.pets = pets;
+
+	$scope.message = "pets for sale!";
+
+});
+
+myApp.controller('SecondController', function($scope, Greeting){
+	$scope.greeting = Greeting;
+});
+

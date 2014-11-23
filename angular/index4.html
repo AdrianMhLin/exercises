@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="candyShop">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div ng-controller="CandyController">
+		<h1>{{message}}</h1>
+		<input type="text" ng-model="input">
+		<h2>{{input}}</h2>
+
+		<ol>
+			<li ng-repeat="candy in candies">
+				{{candy.type}} {{candy.price | currency}}
+			</li>
+		</ol>
+	</div>
+
+
+	
+	<script src="vendor/angularjs/angular.js"></script>
+    <script src="app4.js"></script>
+</body>
+</html>

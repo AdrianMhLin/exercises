@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="newApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" ng-model="test">
+	<h1>{{test}}</h1>
+
+	<div ng-controller="OctopusController">
+		<h1>{{message}}</h1>
+
+		<section>
+			<div ng-repeat="octopus in octopuses">
+				<h3>{{octopus.name}}, {{octopus.color}}, {{octopus.price | currency}}</h3>
+			</div>
+		</section>
+	</div>
+
+
+
+
+	<script src="vendor/angularjs/angular.js"></script>
+    <script src="app3.js"></script>
+</body>
+</html>
