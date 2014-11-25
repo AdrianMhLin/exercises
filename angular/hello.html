@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hello">
+<head>
+	<meta charset="UTF-8">
+	<title>Hello</title>
+</head>
+<body>
+
+	<div ng-controller="HelloController">
+		<input type="text" ng-model="input">
+		<h1>{{input}}</h1>
+
+		<h3>{{message.text}}</h3>		
+
+	</div>
+
+
+
+
+	<script src="vendor/angularjs/angular.js"></script>
+	<script src="hello.js"></script>
+</body>
+</html>

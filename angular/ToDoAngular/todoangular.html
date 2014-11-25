@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+<head>
+	<meta charset="UTF-8">
+	<title>to do angular</title>
+</head>
+<body>
+	<div ng-controller="TodoController">
+		<h3>{{message}}</h3>
+
+		<ol>
+			<li ng-repeat="item in todos">
+				<input type="checkbox" ng-model="checked">
+				{{item.product}} {{item.price | currency}}
+			</li>
+		</ol>
+	</div>
+
+
+	<script src="vendor/angularjs/angular.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
+
